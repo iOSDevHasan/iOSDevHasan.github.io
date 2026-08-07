@@ -76,6 +76,8 @@
     }
     .app-card.receiptstub { background: linear-gradient(145deg, rgba(10, 54, 43, .96), rgba(5, 25, 20, .93)); }
     .app-card.presenttime { background: linear-gradient(145deg, rgba(11, 49, 34, .96), rgba(3, 17, 13, .95)); }
+    .app-card.gamedropradar { background: linear-gradient(145deg, rgba(25, 23, 86, .98), rgba(7, 10, 35, .96)); }
+    .app-card.mathowl { background: linear-gradient(145deg, rgba(72, 39, 156, .97), rgba(22, 54, 116, .96)); }
     .copy { padding: clamp(30px, 5vw, 64px); display: flex; flex-direction: column; align-items: flex-start; }
     .app-title { display: flex; align-items: center; gap: 18px; }
     .app-icon { width: 82px; height: 82px; border-radius: 20px; box-shadow: 0 18px 45px rgba(0, 0, 0, .28); }
@@ -89,10 +91,8 @@
     .button.secondary { border: 1px solid rgba(255, 255, 255, .17); color: #d9e7e1; }
     .preview { min-height: 540px; display: flex; align-items: flex-end; justify-content: center; padding: 46px 38px 0; }
     .preview img { display: block; width: min(100%, 330px); max-height: 520px; object-fit: cover; object-position: top; border-radius: 26px 26px 0 0; box-shadow: 0 0 70px rgba(32, 224, 159, .16); }
-    .more-apps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 64px 0 0; }
-    .small-card { padding: 28px; border: 1px solid var(--line); border-radius: 24px; background: var(--panel); }
-    .small-card h3 { margin: 0 0 10px; font-size: 1.3rem; }
-    .small-card p { margin: 0; color: var(--muted); line-height: 1.55; }
+    .gamedropradar .preview img { box-shadow: 0 0 76px rgba(109, 86, 255, .25); }
+    .mathowl .preview img { box-shadow: 0 0 76px rgba(92, 214, 255, .2); }
     footer { display: flex; justify-content: space-between; gap: 20px; padding: 64px 0 34px; color: #788a83; font-size: .88rem; }
     footer a { color: #a9b8b2; text-decoration: none; }
     @media (max-width: 760px) {
@@ -102,7 +102,6 @@
       .copy { min-height: 470px; }
       .preview { min-height: 420px; padding-top: 0; }
       .preview img { max-height: 430px; }
-      .more-apps { grid-template-columns: 1fr; }
       footer { flex-direction: column; }
     }
   </style>
@@ -171,18 +170,51 @@
               <img src="assets/presenttime-preview.jpg" alt="PresentTime presentation timer marketing screen" width="554" height="1200">
             </div>
           </article>
-        </div>
-      </section>
 
-      <section class="more-apps" aria-label="More apps">
-        <article class="small-card">
-          <h3>Game Drop Radar</h3>
-          <p>A personal radar for limited-time free game drops — scored for your taste, with reminders, a calendar, and a Home Screen widget.</p>
-        </article>
-        <article class="small-card">
-          <h3>MathOwl: Daily Math</h3>
-          <p>Focused daily practice for sharper, faster mental arithmetic.</p>
-        </article>
+          <article class="app-card gamedropradar" id="gamedropradar">
+            <div class="copy">
+              <div class="app-title">
+                <img class="app-icon" src="assets/gamedropradar-icon.png" alt="GameDropRadar app icon" width="82" height="82">
+                <h2>GameDropRadar</h2>
+              </div>
+              <div class="badges">
+                <span class="badge">Available now</span>
+                <span class="badge">Free</span>
+                <span class="badge">iPhone + Widget</span>
+              </div>
+              <p>Your personal radar for limited-time game drops. See every offer in one place, get a taste-based Claim Score, save the games that matter, and receive a reminder before they disappear.</p>
+              <div class="actions">
+                <a class="button primary" href="https://apps.apple.com/us/app/gamedropradar/id6792497198">View on the App Store</a>
+                <a class="button secondary" href="https://sites.google.com/view/gamedropradar-en/ana-sayfa">Privacy policy</a>
+              </div>
+            </div>
+            <div class="preview">
+              <img src="assets/gamedropradar-preview.jpg" alt="GameDropRadar personalized game drop radar" width="554" height="1200">
+            </div>
+          </article>
+
+          <article class="app-card mathowl" id="mathowl">
+            <div class="copy">
+              <div class="app-title">
+                <img class="app-icon" src="assets/mathowl-icon.png" alt="MathOwl app icon" width="82" height="82">
+                <h2>MathOwl</h2>
+              </div>
+              <div class="badges">
+                <span class="badge">Available now</span>
+                <span class="badge">Free</span>
+                <span class="badge">Daily Math + Duels</span>
+              </div>
+              <p>Build faster mental arithmetic with Professor Owl. Play quick ten-question levels, protect your daily streak, race friends live, climb Game Center leaderboards, and follow your progress from the Home Screen widget.</p>
+              <div class="actions">
+                <a class="button primary" href="https://apps.apple.com/us/app/mathowl-daily-math/id6787484771">View on the App Store</a>
+                <a class="button secondary" href="https://sites.google.com/view/mathowl-privacy-en/ana-sayfa">Privacy policy</a>
+              </div>
+            </div>
+            <div class="preview">
+              <img src="assets/mathowl-preview.jpg" alt="MathOwl live arithmetic duel" width="554" height="1200">
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
