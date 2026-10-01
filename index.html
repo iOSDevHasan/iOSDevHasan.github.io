@@ -74,6 +74,7 @@
       background: var(--panel);
       box-shadow: 0 34px 90px rgba(0, 0, 0, .24);
     }
+    .app-card.golbil { background: linear-gradient(145deg, rgba(22, 46, 156, .97), rgba(6, 12, 52, .96)); }
     .app-card.receiptstub { background: linear-gradient(145deg, rgba(10, 54, 43, .96), rgba(5, 25, 20, .93)); }
     .app-card.presenttime { background: linear-gradient(145deg, rgba(11, 49, 34, .96), rgba(3, 17, 13, .95)); }
     .app-card.gamedropradar { background: linear-gradient(145deg, rgba(25, 23, 86, .98), rgba(7, 10, 35, .96)); }
@@ -91,6 +92,7 @@
     .button.secondary { border: 1px solid rgba(255, 255, 255, .17); color: #d9e7e1; }
     .preview { min-height: 540px; display: flex; align-items: flex-end; justify-content: center; padding: 46px 38px 0; }
     .preview img { display: block; width: min(100%, 330px); max-height: 520px; object-fit: cover; object-position: top; border-radius: 26px 26px 0 0; box-shadow: 0 0 70px rgba(32, 224, 159, .16); }
+    .golbil .preview img { box-shadow: 0 0 76px rgba(70, 140, 255, .28); }
     .gamedropradar .preview img { box-shadow: 0 0 76px rgba(109, 86, 255, .25); }
     .mathowl .preview img { box-shadow: 0 0 76px rgba(92, 214, 255, .2); }
     footer { display: flex; justify-content: space-between; gap: 20px; padding: 64px 0 34px; color: #788a83; font-size: .88rem; }
@@ -127,6 +129,28 @@
       <section id="apps" aria-labelledby="apps-heading">
         <h2 class="section-heading" id="apps-heading">Featured apps</h2>
         <div class="featured">
+          <article class="app-card golbil" id="golbil">
+            <div class="copy">
+              <div class="app-title">
+                <img class="app-icon" src="assets/golbil-icon.png" alt="GolBil app icon" width="82" height="82">
+                <h2>GolBil</h2>
+              </div>
+              <div class="badges">
+                <span class="badge">Coming soon</span>
+                <span class="badge">iPhone + Widget</span>
+                <span class="badge">Türkiye</span>
+              </div>
+              <p>A Turkish football trivia game. Duel rivals live on the same question, find the daily mystery star from his career path, keep your streak burning and climb the leaderboards — with text, photo and video questions.</p>
+              <div class="actions">
+                <a class="button primary" href="https://golbil.web.app/">Support</a>
+                <a class="button secondary" href="https://golbil.web.app/privacy">Privacy policy</a>
+              </div>
+            </div>
+            <div class="preview">
+              <img src="assets/golbil-preview.jpg" alt="GolBil daily mystery star game" width="554" height="1200">
+            </div>
+          </article>
+
           <article class="app-card receiptstub" id="receiptstub">
             <div class="copy">
               <div class="app-title">
