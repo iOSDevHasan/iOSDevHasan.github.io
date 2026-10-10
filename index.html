@@ -74,6 +74,8 @@
       background: var(--panel);
       box-shadow: 0 34px 90px rgba(0, 0, 0, .24);
     }
+    .app-card.anglepuzzle { background: linear-gradient(145deg, rgba(14, 64, 150, .97), rgba(6, 18, 52, .96)); }
+    .anglepuzzle .preview img { box-shadow: 0 0 76px rgba(74, 163, 255, .3); }
     .app-card.golbil { background: linear-gradient(145deg, rgba(22, 46, 156, .97), rgba(6, 12, 52, .96)); }
     .app-card.receiptstub { background: linear-gradient(145deg, rgba(10, 54, 43, .96), rgba(5, 25, 20, .93)); }
     .app-card.presenttime { background: linear-gradient(145deg, rgba(11, 49, 34, .96), rgba(3, 17, 13, .95)); }
@@ -129,6 +131,28 @@
       <section id="apps" aria-labelledby="apps-heading">
         <h2 class="section-heading" id="apps-heading">Featured apps</h2>
         <div class="featured">
+          <article class="app-card anglepuzzle" id="anglepuzzle">
+            <div class="copy">
+              <div class="app-title">
+                <img class="app-icon" src="assets/anglepuzzle-icon.png" alt="Angle Puzzle app icon" width="82" height="82">
+                <h2>Angle Puzzle</h2>
+              </div>
+              <div class="badges">
+                <span class="badge">Coming soon</span>
+                <span class="badge">iPhone Duo</span>
+                <span class="badge">No data collected</span>
+              </div>
+              <p>An angle-matching game built around the hinge of iPhone Duo. Open or close your phone to hit the target angle and hold it while the ring fills — 60 levels, untimed Practice and a 90-second Challenge, all offline.</p>
+              <div class="actions">
+                <a class="button primary" href="anglepuzzle/">Learn more</a>
+                <a class="button secondary" href="anglepuzzle/privacy.html">Privacy policy</a>
+              </div>
+            </div>
+            <div class="preview">
+              <img src="assets/anglepuzzle-preview.jpg" alt="Angle Puzzle on iPhone Duo" width="554" height="806">
+            </div>
+          </article>
+
           <article class="app-card golbil" id="golbil">
             <div class="copy">
               <div class="app-title">
