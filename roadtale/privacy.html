@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RoadTale gizlilik politikası: konum, yerel geçmiş, Premium yapay zekâ ve güvenlik verilerinin kullanımı.">
+  <title>RoadTale Gizlilik Politikası</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; color: #fff7ed; background: radial-gradient(circle at 15% 0%, #5b2e15, transparent 34rem), #10141d; }
+    main { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: 56px 0 80px; }
+    a { color: #ffad64; }
+    .back { display: inline-block; margin-bottom: 54px; text-decoration: none; color: #c5b9ae; }
+    h1 { margin: 0 0 8px; font-size: clamp(2.5rem, 8vw, 4.8rem); letter-spacing: -.055em; line-height: 1.05; }
+    .date { color: #adaba9; margin-bottom: 48px; }
+    h2 { margin: 42px 0 12px; font-size: 1.28rem; }
+    p, li { color: #d1c9c2; font-size: 1.02rem; line-height: 1.72; }
+    li + li { margin-top: 8px; }
+    footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); color: #a9a39d; }
+  </style>
+</head>
+<body>
+<main>
+  <a class="back" href="../index.html#roadtale">← iOSDevHasan / RoadTale</a>
+  <h1>RoadTale Gizlilik Politikası</h1>
+  <p class="date">Yürürlük tarihi: 11 Ekim 2026</p>
+
+  <p>RoadTale, Hasan Berat Gürbüz tarafından geliştirilen, yolculuk sırasında yakındaki yerleri sesli anlatan bir iOS uygulamasıdır. Bu politika uygulamanın konum, anlatım, satın alma ve güvenlik verilerini nasıl işlediğini açıklar. RoadTale için hesap oluşturmanız gerekmez.</p>
+
+  <h2>Konum ve harita</h2>
+  <p>İzin verirseniz RoadTale, yakındaki yerleri bulmak, yön ve mesafe hesaplamak ve yolculuk sırasında anlatımı doğru zamanda başlatmak için cihazınızın konumunu ve hareket yönünü kullanır. Başlattığınız yolculukta bu işlem uygulama arka plandayken veya ekran kilitliyken de sürebilir. Yolculuğu durdurduğunuzda sürekli konum takibi durur. İzni iOS Ayarlar'dan değiştirebilirsiniz.</p>
+  <p>Ham GPS koordinatlarınız ve rota geçmişiniz RoadTale'ın yapay zekâ isteğine eklenmez. Yakındaki yerlerin seçimi ve haritadaki konum işlemleri cihazda yapılır. Harita gösterimi Apple'ın MapKit hizmetini kullanır; Apple, harita hizmetinin çalışması için verileri kendi <a href="https://www.apple.com/legal/privacy/">gizlilik politikasına</a> göre işleyebilir.</p>
+
+  <h2>Çevrimdışı kullanım ve cihazdaki veriler</h2>
+  <p>Uygulamadaki yer kataloğu ve temel sesli anlatım internet bağlantısı olmadan kullanılabilir. Dinleme geçmişinde yer adı, şehir, kategori, anlatım metni, tarih ve seçilen mod cihazınızda saklanır. Premium ses dosyası üretildiğinde, yeniden dinleyebilmeniz için cihazda tutulabilir; bu ses klasörü cihaz yedeklemesinin dışında bırakılır. Geçmiş en fazla son 100 anlatımı tutar ve uygulamadaki geçmişi temizleme seçeneğiyle silinebilir. Anlatım ve kategori tercihleri de cihazınızda saklanır.</p>
+
+  <h2>Premium yapay zekâ anlatımı</h2>
+  <p>Premium anlatım istediğinizde uygulama, RoadTale'ın Cloudflare Worker hizmetine anlatılacak yerin kimliğini, adını, şehrini, ülkesini, kategorisini ve katalogdaki anlatım bağlamını; ayrıca o yere yaklaşık mesafenizi, göreli yönünü ve yetişkin/çocuk anlatım modunu gönderir. Worker bu bilgileri bir anlatım metni oluşturmak için OpenAI API'sine iletir. Premium ses kullanıldığında, oluşturulan anlatım metni ve seçilen ses karakteri de ses üretimi için OpenAI API'sine gönderilir. Tam GPS koordinatı, hareket rotası, dinleme geçmişinin tamamı ve iletişim bilgileriniz bu isteklere eklenmez. Bununla birlikte yer, yaklaşık mesafe ve yön bilgileri bulunduğunuz bölge hakkında çıkarım yapılmasına imkân verebilir.</p>
+  <p>RoadTale, OpenAI metin isteğinde API'nin <code>store: false</code> seçeneğini kullanır. Bu seçenek OpenAI'ın tüm veri işleme veya güvenlik saklama süreçlerinin sıfırlandığı anlamına gelmez. OpenAI'ın veri uygulamaları için <a href="https://developers.openai.com/api/docs/guides/your-data">açıklamasına</a> bakabilirsiniz. Temel çevrimdışı anlatımı seçerek Premium yapay zekâ aktarımını kullanmadan da uygulamadan yararlanabilirsiniz.</p>
+
+  <h2>Satın alma ve güvenlik</h2>
+  <p>Premium abonelikler Apple StoreKit üzerinden yürütülür. RoadTale, Premium isteğinin yetkili olduğunu doğrulamak için Apple tarafından imzalanmış işlem kanıtını Worker'a gönderir. Ödeme kartı bilgilerinizi RoadTale almaz; satın alma ve abonelik işlemleri Apple tarafından yönetilir.</p>
+  <p>Worker, kötüye kullanımı sınırlamak için Apple App Attest kanıtlarını ve cihaz için oluşturulmuş güvenlik anahtarının kimliği, açık anahtarı, doğrulama sayacı ve kullanım kotası gibi kayıtları işler. Cloudflare, ağ isteği sırasında IP adresinizi ve teknik bağlantı bilgilerini işleyebilir. RoadTale Worker, hız sınırı için IP adresinden gizli anahtarla bir özet üretir; ham IP adresini uygulamanın kendi veritabanına kaydetmez. Hata kayıtları istek kimliği, uç nokta ve hata kodu gibi teknik bilgileri içerebilir; anlatım metni ve ham konum bu kayıtlara eklenmez. Cloudflare'ın kendi hizmet verisi uygulamaları için <a href="https://www.cloudflare.com/privacypolicy/">gizlilik politikasına</a> bakabilirsiniz.</p>
+
+  <h2>Paylaşım, saklama ve tercihleriniz</h2>
+  <p>RoadTale'da reklam veya üçüncü taraf davranış analitiği SDK'sı bulunmaz; veriler reklam hedefleme amacıyla kullanılmaz. Premium ve güvenlik işlevleri için yukarıda açıklanan veriler Cloudflare, OpenAI ve Apple hizmetleri tarafından işlenebilir. Bu hizmetler verileri Türkiye dışında da işleyebilir. Yerel geçmişi uygulama içinden silebilirsiniz. Uygulamayı kaldırdığınızda uygulamanın veri alanı silinir; App Attest için cihaz Keychain'inde saklanan anahtar kimliği kalabilir. Sunucu tarafındaki güvenlik kayıtları veya veri işleme hakkında soru ve talepleriniz için aşağıdaki adrese yazın.</p>
+
+  <h2>İletişim ve değişiklikler</h2>
+  <p>Gizlilik sorularınız için <a href="mailto:hasan.gurbuz11@hotmail.com?subject=RoadTale%20Gizlilik">hasan.gurbuz11@hotmail.com</a> adresine ulaşabilirsiniz. Bu politika uygulama veya hizmetler değiştikçe güncellenebilir; güncel sürüm bu sayfada yayımlanır.</p>
+  <footer>© 2026 Hasan Berat Gürbüz · <a href="support.html">RoadTale Destek</a></footer>
+</main>
+</body>
+</html>
