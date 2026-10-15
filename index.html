@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Independent iPhone and Apple Watch apps by Hasan Berat Gürbüz.">
-  <title>iOSDevHasan — Thoughtful apps for Apple platforms</title>
+  <meta name="description" content="Hasan Berat Gürbüz tarafından geliştirilen bağımsız iPhone ve Apple Watch uygulamaları.">
+  <title data-tr="iOSDevHasan — Apple platformları için özenli uygulamalar" data-en="iOSDevHasan — Thoughtful apps for Apple platforms">iOSDevHasan — Apple platformları için özenli uygulamalar</title>
   <style>
     :root {
       color-scheme: dark;
@@ -37,9 +37,13 @@
       padding: 28px 0;
     }
     .brand { font-weight: 750; letter-spacing: -.03em; text-decoration: none; }
+    .header-actions { display: flex; align-items: center; gap: 24px; }
     nav { display: flex; gap: 22px; color: var(--muted); font-size: .92rem; }
     nav a { text-decoration: none; }
     nav a:hover { color: var(--ink); }
+    .language-switcher { display: inline-flex; padding: 4px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.045); }
+    .language-switcher button { min-width: 42px; min-height: 34px; padding: 0 10px; border: 0; border-radius: 999px; color: var(--muted); background: transparent; font: inherit; font-size: .8rem; font-weight: 750; cursor: pointer; }
+    .language-switcher button[aria-pressed="true"] { color: var(--deep); background: var(--green-soft); }
     .hero { padding: 88px 0 74px; max-width: 800px; }
     .eyebrow {
       color: var(--green-soft);
@@ -103,6 +107,8 @@
     footer a { color: #a9b8b2; text-decoration: none; }
     @media (max-width: 760px) {
       nav { display: none; }
+      .shell { width: min(100% - 28px, 1120px); }
+      header { padding: 20px 0; }
       .hero { padding: 56px 0; }
       .app-card { grid-template-columns: 1fr; }
       .copy { min-height: 470px; }
@@ -116,82 +122,86 @@
   <div class="shell">
     <header>
       <a class="brand" href="/">iOSDevHasan</a>
-      <nav aria-label="Primary navigation">
-        <a href="#apps">Apps</a>
-        <a href="mailto:hasan.gurbuz11@hotmail.com">Contact</a>
-        <a href="https://github.com/iOSDevHasan">GitHub</a>
-      </nav>
+      <div class="header-actions">
+        <nav aria-label="Ana navigasyon" data-aria-tr="Ana navigasyon" data-aria-en="Primary navigation">
+          <a href="#apps" data-tr="Uygulamalar" data-en="Apps">Uygulamalar</a>
+          <a href="mailto:hasan.gurbuz11@hotmail.com" data-tr="İletişim" data-en="Contact">İletişim</a>
+          <a href="https://github.com/iOSDevHasan">GitHub</a>
+        </nav>
+        <div class="language-switcher" role="group" aria-label="Dil seçimi" data-aria-tr="Dil seçimi" data-aria-en="Language selection">
+          <button type="button" data-language="tr" aria-pressed="true">TR</button>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="eyebrow">Independent Apple developer</div>
-        <h1>Small apps.<br>Clear purpose.</h1>
-        <p>Thoughtful, privacy-conscious tools for iPhone and Apple Watch — designed and built by Hasan Berat Gürbüz.</p>
+        <div class="eyebrow" data-tr="Bağımsız Apple geliştiricisi" data-en="Independent Apple developer">Bağımsız Apple geliştiricisi</div>
+        <h1><span data-tr="Küçük uygulamalar." data-en="Small apps.">Küçük uygulamalar.</span><br><span data-tr="Net bir amaç." data-en="Clear purpose.">Net bir amaç.</span></h1>
+        <p data-tr="Hasan Berat Gürbüz tarafından iPhone ve Apple Watch için tasarlanıp geliştirilen, gizliliğe önem veren özenli araçlar." data-en="Thoughtful, privacy-conscious tools for iPhone and Apple Watch — designed and built by Hasan Berat Gürbüz.">Hasan Berat Gürbüz tarafından iPhone ve Apple Watch için tasarlanıp geliştirilen, gizliliğe önem veren özenli araçlar.</p>
       </section>
 
       <section id="apps" aria-labelledby="apps-heading">
-        <h2 class="section-heading" id="apps-heading">Featured apps</h2>
+        <h2 class="section-heading" id="apps-heading" data-tr="Öne çıkan uygulamalar" data-en="Featured apps">Öne çıkan uygulamalar</h2>
         <div class="featured">
           <article class="app-card anglepuzzle" id="anglepuzzle">
             <div class="copy">
               <div class="app-title">
-                <img class="app-icon" src="assets/anglepuzzle-icon.png" alt="Angle Puzzle app icon" width="82" height="82">
+                <img class="app-icon" src="assets/anglepuzzle-icon.png" alt="Angle Puzzle uygulama simgesi" data-alt-tr="Angle Puzzle uygulama simgesi" data-alt-en="Angle Puzzle app icon" width="82" height="82">
                 <h2>Angle Puzzle</h2>
               </div>
               <div class="badges">
-                <span class="badge">Coming soon</span>
+                <span class="badge" data-tr="Yakında" data-en="Coming soon">Yakında</span>
                 <span class="badge">iPhone Duo</span>
-                <span class="badge">No data collected</span>
+                <span class="badge" data-tr="Veri toplanmaz" data-en="No data collected">Veri toplanmaz</span>
               </div>
-              <p>An angle-matching game built around the hinge of iPhone Duo. Open or close your phone to hit the target angle and hold it while the ring fills — 60 levels, untimed Practice and a 90-second Challenge, all offline.</p>
+              <p data-tr="iPhone Duo'nun menteşesini oyun kumandasına dönüştüren bir açı eşleştirme oyunu. Hedef açıyı yakalamak için telefonunu açıp kapat; 60 bölüm, süresiz Pratik ve 90 saniyelik Mücadele tamamen çevrimdışı." data-en="An angle-matching game built around the hinge of iPhone Duo. Open or close your phone to hit the target angle and hold it while the ring fills — 60 levels, untimed Practice and a 90-second Challenge, all offline.">iPhone Duo'nun menteşesini oyun kumandasına dönüştüren bir açı eşleştirme oyunu. Hedef açıyı yakalamak için telefonunu açıp kapat; 60 bölüm, süresiz Pratik ve 90 saniyelik Mücadele tamamen çevrimdışı.</p>
               <div class="actions">
-                <a class="button primary" href="anglepuzzle/">Learn more</a>
-                <a class="button secondary" href="anglepuzzle/privacy.html">Privacy policy</a>
+                <a class="button primary" href="anglepuzzle/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
               </div>
             </div>
             <div class="preview">
-              <img src="assets/anglepuzzle-preview.jpg" alt="Angle Puzzle on iPhone Duo" width="554" height="806">
+              <img src="assets/anglepuzzle-preview.jpg" alt="iPhone Duo üzerinde Angle Puzzle" data-alt-tr="iPhone Duo üzerinde Angle Puzzle" data-alt-en="Angle Puzzle on iPhone Duo" width="554" height="806">
             </div>
           </article>
 
           <article class="app-card roadtale" id="roadtale">
             <div class="copy">
               <div class="app-title">
-                <img class="app-icon" src="assets/roadtale-icon.png" alt="RoadTale app icon" width="82" height="82">
+                <img class="app-icon" src="assets/roadtale-icon.png" alt="RoadTale uygulama simgesi" data-alt-tr="RoadTale uygulama simgesi" data-alt-en="RoadTale app icon" width="82" height="82">
                 <h2>RoadTale</h2>
               </div>
               <div class="badges">
-                <span class="badge">Coming soon</span>
+                <span class="badge" data-tr="Yakında" data-en="Coming soon">Yakında</span>
                 <span class="badge">iPhone + iPad</span>
                 <span class="badge">Türkiye</span>
               </div>
-              <p>Hear the stories of remarkable places as you travel through Türkiye. RoadTale finds nearby landmarks, plays short audio guides at the right moment, and keeps a local listening history. Its built-in guide works offline; Premium adds AI narration and voice.</p>
+              <p data-tr="Türkiye yollarında ilerlerken çevrendeki dikkat çekici yerlerin hikâyelerini dinle. RoadTale yakındaki noktaları bulur, kısa sesli anlatımları doğru anda oynatır ve dinleme geçmişini cihazında tutar. Yerleşik rehber çevrimdışı çalışır; Premium, yapay zekâ anlatımı ve sesi ekler." data-en="Hear the stories of remarkable places as you travel through Türkiye. RoadTale finds nearby landmarks, plays short audio guides at the right moment, and keeps a local listening history. Its built-in guide works offline; Premium adds AI narration and voice.">Türkiye yollarında ilerlerken çevrendeki dikkat çekici yerlerin hikâyelerini dinle. RoadTale yakındaki noktaları bulur, kısa sesli anlatımları doğru anda oynatır ve dinleme geçmişini cihazında tutar. Yerleşik rehber çevrimdışı çalışır; Premium, yapay zekâ anlatımı ve sesi ekler.</p>
               <div class="actions">
-                <a class="button primary" href="roadtale/support.html">Learn more</a>
-                <a class="button secondary" href="roadtale/privacy.html">Privacy policy</a>
+                <a class="button primary" href="roadtale/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
               </div>
             </div>
             <div class="preview">
-              <img src="assets/roadtale-preview.jpg" alt="RoadTale journey map showing nearby landmarks and a ready to play audio guide" width="552" height="857">
+              <img src="assets/roadtale-preview.jpg" alt="Yakındaki yerleri ve hazır sesli rehberi gösteren RoadTale yolculuk haritası" data-alt-tr="Yakındaki yerleri ve hazır sesli rehberi gösteren RoadTale yolculuk haritası" data-alt-en="RoadTale journey map showing nearby landmarks and a ready to play audio guide" width="552" height="857">
             </div>
           </article>
 
           <article class="app-card golbil" id="golbil">
             <div class="copy">
               <div class="app-title">
-                <img class="app-icon" src="assets/golbil-icon.png" alt="GolBil app icon" width="82" height="82">
+                <img class="app-icon" src="assets/golbil-icon.png" alt="GolBil uygulama simgesi" data-alt-tr="GolBil uygulama simgesi" data-alt-en="GolBil app icon" width="82" height="82">
                 <h2>GolBil</h2>
               </div>
               <div class="badges">
-                <span class="badge">Coming soon</span>
+                <span class="badge" data-tr="Yakında" data-en="Coming soon">Yakında</span>
                 <span class="badge">iPhone + Widget</span>
                 <span class="badge">Türkiye</span>
               </div>
-              <p>A Turkish football trivia game. Duel rivals live on the same question, find the daily mystery star from his career path, keep your streak burning and climb the leaderboards — with text, photo and video questions.</p>
+              <p data-tr="Futbol bilgisini sahaya çıkar. Rakibinle aynı soruda canlı düello yap, kariyer yolundan günün gizli yıldızını bul, serini büyüt ve metin, fotoğraf ile video sorularında liderlik tablosuna tırman." data-en="A Turkish football trivia game. Duel rivals live on the same question, find the daily mystery star from his career path, keep your streak burning and climb the leaderboards — with text, photo and video questions.">Futbol bilgisini sahaya çıkar. Rakibinle aynı soruda canlı düello yap, kariyer yolundan günün gizli yıldızını bul, serini büyüt ve metin, fotoğraf ile video sorularında liderlik tablosuna tırman.</p>
               <div class="actions">
-                <a class="button primary" href="https://golbil.web.app/">Support</a>
-                <a class="button secondary" href="https://golbil.web.app/privacy">Privacy policy</a>
+                <a class="button primary" href="golbil/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
+                <a class="button secondary" href="https://apps.apple.com/app/id6816267421" data-tr="App Store'da görüntüle" data-en="View on the App Store">App Store'da görüntüle</a>
               </div>
             </div>
             <div class="preview">
@@ -202,18 +212,17 @@
           <article class="app-card receiptstub" id="receiptstub">
             <div class="copy">
               <div class="app-title">
-                <img class="app-icon" src="assets/receiptstub-icon.png" alt="ReceiptStub app icon" width="82" height="82">
+                <img class="app-icon" src="assets/receiptstub-icon.png" alt="ReceiptStub uygulama simgesi" data-alt-tr="ReceiptStub uygulama simgesi" data-alt-en="ReceiptStub app icon" width="82" height="82">
                 <h2>ReceiptStub</h2>
               </div>
               <div class="badges">
-                <span class="badge">Coming soon</span>
+                <span class="badge" data-tr="Yakında" data-en="Coming soon">Yakında</span>
                 <span class="badge">iPhone</span>
-                <span class="badge">Private &amp; offline</span>
+                <span class="badge" data-tr="Gizli ve çevrimdışı" data-en="Private &amp; offline">Gizli ve çevrimdışı</span>
               </div>
-              <p>Scan the part of a receipt that matters, review every line item, understand where your money went, and remember how prices change — without an account or cloud upload.</p>
+              <p data-tr="Fişin yalnızca önemli bölümünü tara, her satırı gözden geçir, paranı nereye harcadığını gör ve fiyatların zaman içindeki değişimini takip et — hesap açmadan, buluta yüklemeden." data-en="Scan the part of a receipt that matters, review every line item, understand where your money went, and remember how prices change — without an account or cloud upload.">Fişin yalnızca önemli bölümünü tara, her satırı gözden geçir, paranı nereye harcadığını gör ve fiyatların zaman içindeki değişimini takip et — hesap açmadan, buluta yüklemeden.</p>
               <div class="actions">
-                <a class="button primary" href="receiptstub/support.html">Learn more</a>
-                <a class="button secondary" href="receiptstub/privacy.html">Privacy policy</a>
+                <a class="button primary" href="receiptstub/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
               </div>
             </div>
             <div class="preview">
@@ -224,18 +233,18 @@
           <article class="app-card presenttime" id="presenttime">
             <div class="copy">
               <div class="app-title">
-                <img class="app-icon" src="assets/presenttime-icon.png" alt="PresentTime app icon" width="82" height="82">
+                <img class="app-icon" src="assets/presenttime-icon.png" alt="PresentTime uygulama simgesi" data-alt-tr="PresentTime uygulama simgesi" data-alt-en="PresentTime app icon" width="82" height="82">
                 <h2>PresentTime</h2>
               </div>
               <div class="badges">
-                <span class="badge">Available now</span>
+                <span class="badge" data-tr="Şimdi yayında" data-en="Available now">Şimdi yayında</span>
                 <span class="badge">iPhone + Apple Watch</span>
-                <span class="badge">No data collected</span>
+                <span class="badge" data-tr="Veri toplanmaz" data-en="No data collected">Veri toplanmaz</span>
               </div>
-              <p>A presentation timer built for speakers. Feel distinct wrist taps at the halfway point and in the final minutes, so you can stay with your audience and finish on time.</p>
+              <p data-tr="Konuşmacılar için tasarlanmış bir sunum zamanlayıcısı. Yarı sürede ve son dakikalarda belirgin bilek titreşimleri al; dinleyicine odaklan ve zamanında bitir." data-en="A presentation timer built for speakers. Feel distinct wrist taps at the halfway point and in the final minutes, so you can stay with your audience and finish on time.">Konuşmacılar için tasarlanmış bir sunum zamanlayıcısı. Yarı sürede ve son dakikalarda belirgin bilek titreşimleri al; dinleyicine odaklan ve zamanında bitir.</p>
               <div class="actions">
-                <a class="button primary" href="https://apps.apple.com/us/app/presenttime/id6788519102">View on the App Store</a>
-                <a class="button secondary" href="presenttime/privacy.html">Privacy policy</a>
+                <a class="button primary" href="presenttime/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
+                <a class="button secondary" href="https://apps.apple.com/us/app/presenttime/id6788519102" data-tr="App Store'da görüntüle" data-en="View on the App Store">App Store'da görüntüle</a>
               </div>
             </div>
             <div class="preview">
@@ -246,18 +255,18 @@
           <article class="app-card gamedropradar" id="gamedropradar">
             <div class="copy">
               <div class="app-title">
-                <img class="app-icon" src="assets/gamedropradar-icon.png" alt="GameDropRadar app icon" width="82" height="82">
+                <img class="app-icon" src="assets/gamedropradar-icon.png" alt="Game Drop Radar uygulama simgesi" data-alt-tr="Game Drop Radar uygulama simgesi" data-alt-en="Game Drop Radar app icon" width="82" height="82">
                 <h2>GameDropRadar</h2>
               </div>
               <div class="badges">
-                <span class="badge">Available now</span>
-                <span class="badge">Free</span>
+                <span class="badge" data-tr="Şimdi yayında" data-en="Available now">Şimdi yayında</span>
+                <span class="badge" data-tr="Ücretsiz" data-en="Free">Ücretsiz</span>
                 <span class="badge">iPhone + Widget</span>
               </div>
-              <p>Your personal radar for limited-time game drops. See every offer in one place, get a taste-based Claim Score, save the games that matter, and receive a reminder before they disappear.</p>
+              <p data-tr="Süreli ücretsiz oyun fırsatları için kişisel radarın. Tüm fırsatları tek yerde gör, zevkine göre Radar Puanı al, ilgini çeken oyunları kaydet ve süreleri dolmadan hatırlatıl." data-en="Your personal radar for limited-time game drops. See every offer in one place, get a taste-based Claim Score, save the games that matter, and receive a reminder before they disappear.">Süreli ücretsiz oyun fırsatları için kişisel radarın. Tüm fırsatları tek yerde gör, zevkine göre Radar Puanı al, ilgini çeken oyunları kaydet ve süreleri dolmadan hatırlatıl.</p>
               <div class="actions">
-                <a class="button primary" href="https://apps.apple.com/us/app/gamedropradar/id6792497198">View on the App Store</a>
-                <a class="button secondary" href="https://sites.google.com/view/gamedropradar-en/ana-sayfa">Privacy policy</a>
+                <a class="button primary" href="gamedropradar/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
+                <a class="button secondary" href="https://apps.apple.com/us/app/gamedropradar/id6792497198" data-tr="App Store'da görüntüle" data-en="View on the App Store">App Store'da görüntüle</a>
               </div>
             </div>
             <div class="preview">
@@ -268,18 +277,18 @@
           <article class="app-card mathowl" id="mathowl">
             <div class="copy">
               <div class="app-title">
-                <img class="app-icon" src="assets/mathowl-icon.png" alt="MathOwl app icon" width="82" height="82">
+                <img class="app-icon" src="assets/mathowl-icon.png" alt="MathOwl uygulama simgesi" data-alt-tr="MathOwl uygulama simgesi" data-alt-en="MathOwl app icon" width="82" height="82">
                 <h2>MathOwl</h2>
               </div>
               <div class="badges">
-                <span class="badge">Available now</span>
-                <span class="badge">Free</span>
-                <span class="badge">Daily Math + Duels</span>
+                <span class="badge" data-tr="Şimdi yayında" data-en="Available now">Şimdi yayında</span>
+                <span class="badge" data-tr="Ücretsiz" data-en="Free">Ücretsiz</span>
+                <span class="badge" data-tr="Günlük matematik + Düello" data-en="Daily Math + Duels">Günlük matematik + Düello</span>
               </div>
-              <p>Build faster mental arithmetic with Professor Owl. Play quick ten-question levels, protect your daily streak, race friends live, climb Game Center leaderboards, and follow your progress from the Home Screen widget.</p>
+              <p data-tr="Profesör Baykuş ile zihinden işlem hızını geliştir. On soruluk hızlı bölümler oyna, günlük serini koru, arkadaşlarınla canlı yarış, Game Center liderlik tablosuna tırman ve ilerlemeni ana ekran widget'ından izle." data-en="Build faster mental arithmetic with Professor Owl. Play quick ten-question levels, protect your daily streak, race friends live, climb Game Center leaderboards, and follow your progress from the Home Screen widget.">Profesör Baykuş ile zihinden işlem hızını geliştir. On soruluk hızlı bölümler oyna, günlük serini koru, arkadaşlarınla canlı yarış, Game Center liderlik tablosuna tırman ve ilerlemeni ana ekran widget'ından izle.</p>
               <div class="actions">
-                <a class="button primary" href="https://apps.apple.com/us/app/mathowl-daily-math/id6787484771">View on the App Store</a>
-                <a class="button secondary" href="https://sites.google.com/view/mathowl-privacy-en/ana-sayfa">Privacy policy</a>
+                <a class="button primary" href="mathowl/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
+                <a class="button secondary" href="https://apps.apple.com/us/app/mathowl-daily-math/id6787484771" data-tr="App Store'da görüntüle" data-en="View on the App Store">App Store'da görüntüle</a>
               </div>
             </div>
             <div class="preview">
@@ -295,5 +304,6 @@
       <span><a href="mailto:hasan.gurbuz11@hotmail.com">hasan.gurbuz11@hotmail.com</a> · <a href="https://github.com/iOSDevHasan">GitHub</a></span>
     </footer>
   </div>
+  <script src="assets/language.js"></script>
 </body>
 </html>
