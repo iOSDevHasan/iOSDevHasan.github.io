@@ -97,6 +97,7 @@
     .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border-radius: 14px; font-weight: 700; text-decoration: none; }
     .button.primary { background: #f5faf7; color: #08251d; }
     .button.secondary { border: 1px solid rgba(255, 255, 255, .17); color: #d9e7e1; }
+    .button.pending { border: 1px dashed rgba(255, 255, 255, .22); color: #a9b8b2; cursor: default; }
     .preview { min-height: 540px; display: flex; align-items: flex-end; justify-content: center; padding: 46px 38px 0; }
     .preview img { display: block; width: min(100%, 330px); max-height: 520px; object-fit: cover; object-position: top; border-radius: 26px 26px 0 0; box-shadow: 0 0 70px rgba(32, 224, 159, .16); }
     .golbil .preview img { box-shadow: 0 0 76px rgba(70, 140, 255, .28); }
@@ -159,6 +160,7 @@
               <p data-tr="iPhone Duo'nun menteşesini oyun kumandasına dönüştüren bir açı eşleştirme oyunu. Hedef açıyı yakalamak için telefonunu açıp kapat; 60 bölüm, süresiz Pratik ve 90 saniyelik Mücadele tamamen çevrimdışı." data-en="An angle-matching game built around the hinge of iPhone Duo. Open or close your phone to hit the target angle and hold it while the ring fills — 60 levels, untimed Practice and a 90-second Challenge, all offline.">iPhone Duo'nun menteşesini oyun kumandasına dönüştüren bir açı eşleştirme oyunu. Hedef açıyı yakalamak için telefonunu açıp kapat; 60 bölüm, süresiz Pratik ve 90 saniyelik Mücadele tamamen çevrimdışı.</p>
               <div class="actions">
                 <a class="button primary" href="anglepuzzle/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
+                <span class="button pending" data-tr="Yakında App Store'da" data-en="Coming soon to the App Store">Yakında App Store'da</span>
               </div>
             </div>
             <div class="preview">
@@ -180,10 +182,11 @@
               <p data-tr="Türkiye yollarında ilerlerken çevrendeki dikkat çekici yerlerin hikâyelerini dinle. RoadTale yakındaki noktaları bulur, kısa sesli anlatımları doğru anda oynatır ve dinleme geçmişini cihazında tutar. Yerleşik rehber çevrimdışı çalışır; Premium, yapay zekâ anlatımı ve sesi ekler." data-en="Hear the stories of remarkable places as you travel through Türkiye. RoadTale finds nearby landmarks, plays short audio guides at the right moment, and keeps a local listening history. Its built-in guide works offline; Premium adds AI narration and voice.">Türkiye yollarında ilerlerken çevrendeki dikkat çekici yerlerin hikâyelerini dinle. RoadTale yakındaki noktaları bulur, kısa sesli anlatımları doğru anda oynatır ve dinleme geçmişini cihazında tutar. Yerleşik rehber çevrimdışı çalışır; Premium, yapay zekâ anlatımı ve sesi ekler.</p>
               <div class="actions">
                 <a class="button primary" href="roadtale/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
+                <span class="button pending" data-tr="Yakında App Store'da" data-en="Coming soon to the App Store">Yakında App Store'da</span>
               </div>
             </div>
             <div class="preview">
-              <img src="assets/roadtale-preview.jpg" alt="Yakındaki yerleri ve hazır sesli rehberi gösteren RoadTale yolculuk haritası" data-alt-tr="Yakındaki yerleri ve hazır sesli rehberi gösteren RoadTale yolculuk haritası" data-alt-en="RoadTale journey map showing nearby landmarks and a ready to play audio guide" width="552" height="857">
+              <img src="assets/roadtale-preview.jpg" alt="RoadTale: Türkiye'nin dört bir yanından 1.496 hikâyeli yer" data-alt-tr="RoadTale: Türkiye'nin dört bir yanından 1.496 hikâyeli yer" data-alt-en="RoadTale: 1,496 places with stories across Türkiye" width="600" height="1304">
             </div>
           </article>
 
@@ -201,10 +204,11 @@
               <p data-tr="Futbol bilgisini sahaya çıkar. Rakibinle aynı soruda canlı düello yap, kariyer yolundan günün gizli yıldızını bul, serini büyüt ve metin, fotoğraf ile video sorularında liderlik tablosuna tırman." data-en="A Turkish football trivia game. Duel rivals live on the same question, find the daily mystery star from his career path, keep your streak burning and climb the leaderboards — with text, photo and video questions.">Futbol bilgisini sahaya çıkar. Rakibinle aynı soruda canlı düello yap, kariyer yolundan günün gizli yıldızını bul, serini büyüt ve metin, fotoğraf ile video sorularında liderlik tablosuna tırman.</p>
               <div class="actions">
                 <a class="button primary" href="golbil/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
+                <span class="button pending" data-tr="Yakında App Store'da" data-en="Coming soon to the App Store">Yakında App Store'da</span>
               </div>
             </div>
             <div class="preview">
-              <img src="assets/golbil-preview.jpg" alt="GolBil home screen with the daily Gizli Yıldız card and game modes" width="554" height="1200">
+              <img src="assets/golbil-preview.jpg" alt="GolBil: futbol bilgini sahaya çıkar" data-alt-tr="GolBil: futbol bilgini sahaya çıkar" data-alt-en="GolBil: put your football knowledge in play" width="600" height="1304">
             </div>
           </article>
 
@@ -215,17 +219,19 @@
                 <h2>ReceiptStub</h2>
               </div>
               <div class="badges">
-                <span class="badge" data-tr="Yakında" data-en="Coming soon">Yakında</span>
+                <span class="badge" data-tr="Şimdi yayında" data-en="Available now">Şimdi yayında</span>
+                <span class="badge" data-tr="Ücretsiz" data-en="Free">Ücretsiz</span>
                 <span class="badge">iPhone</span>
                 <span class="badge" data-tr="Gizli ve çevrimdışı" data-en="Private &amp; offline">Gizli ve çevrimdışı</span>
               </div>
               <p data-tr="Fişin yalnızca önemli bölümünü tara, her satırı gözden geçir, paranı nereye harcadığını gör ve fiyatların zaman içindeki değişimini takip et — hesap açmadan, buluta yüklemeden." data-en="Scan the part of a receipt that matters, review every line item, understand where your money went, and remember how prices change — without an account or cloud upload.">Fişin yalnızca önemli bölümünü tara, her satırı gözden geçir, paranı nereye harcadığını gör ve fiyatların zaman içindeki değişimini takip et — hesap açmadan, buluta yüklemeden.</p>
               <div class="actions">
                 <a class="button primary" href="receiptstub/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
+                <a class="button secondary" href="https://apps.apple.com/us/app/receiptstub-receipt-scanner/id6798818327" data-tr="App Store'dan indir" data-en="Download on the App Store">App Store'dan indir</a>
               </div>
             </div>
             <div class="preview">
-              <img src="assets/receiptstub-preview.jpg" alt="ReceiptStub receipt scanning screen" width="554" height="1200">
+              <img src="assets/receiptstub-preview.jpg" alt="ReceiptStub: fişin yalnızca önemli kısmını tara" data-alt-tr="ReceiptStub: fişin yalnızca önemli kısmını tara" data-alt-en="ReceiptStub: scan only what matters" width="600" height="1304">
             </div>
           </article>
 
@@ -243,11 +249,11 @@
               <p data-tr="Konuşmacılar için tasarlanmış bir sunum zamanlayıcısı. Yarı sürede ve son dakikalarda belirgin bilek titreşimleri al; dinleyicine odaklan ve zamanında bitir." data-en="A presentation timer built for speakers. Feel distinct wrist taps at the halfway point and in the final minutes, so you can stay with your audience and finish on time.">Konuşmacılar için tasarlanmış bir sunum zamanlayıcısı. Yarı sürede ve son dakikalarda belirgin bilek titreşimleri al; dinleyicine odaklan ve zamanında bitir.</p>
               <div class="actions">
                 <a class="button primary" href="presenttime/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
-                <a class="button secondary" href="https://apps.apple.com/us/app/presenttime/id6788519102" data-tr="App Store'da görüntüle" data-en="View on the App Store">App Store'da görüntüle</a>
+                <a class="button secondary" href="https://apps.apple.com/us/app/presenttime-speech-timer/id6788519102" data-tr="App Store'dan indir" data-en="Download on the App Store">App Store'dan indir</a>
               </div>
             </div>
             <div class="preview">
-              <img src="assets/presenttime-preview.jpg" alt="PresentTime presentation timer marketing screen" width="554" height="1200">
+              <img src="assets/presenttime-preview.jpg" alt="PresentTime: Apple Watch bileğine dokunarak süreyi hatırlatır" data-alt-tr="PresentTime: Apple Watch bileğine dokunarak süreyi hatırlatır" data-alt-en="PresentTime: your Apple Watch taps your wrist to keep time" width="600" height="1304">
             </div>
           </article>
 
@@ -265,11 +271,11 @@
               <p data-tr="Süreli ücretsiz oyun fırsatları için kişisel radarın. Tüm fırsatları tek yerde gör, zevkine göre Radar Puanı al, ilgini çeken oyunları kaydet ve süreleri dolmadan hatırlatıl." data-en="Your personal radar for limited-time game drops. See every offer in one place, get a taste-based Claim Score, save the games that matter, and receive a reminder before they disappear.">Süreli ücretsiz oyun fırsatları için kişisel radarın. Tüm fırsatları tek yerde gör, zevkine göre Radar Puanı al, ilgini çeken oyunları kaydet ve süreleri dolmadan hatırlatıl.</p>
               <div class="actions">
                 <a class="button primary" href="gamedropradar/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
-                <a class="button secondary" href="https://apps.apple.com/us/app/gamedropradar/id6792497198" data-tr="App Store'da görüntüle" data-en="View on the App Store">App Store'da görüntüle</a>
+                <a class="button secondary" href="https://apps.apple.com/us/app/gamedropradar/id6792497198" data-tr="App Store'dan indir" data-en="Download on the App Store">App Store'dan indir</a>
               </div>
             </div>
             <div class="preview">
-              <img src="assets/gamedropradar-preview.jpg" alt="GameDropRadar personalized game drop radar" width="554" height="1200">
+              <img src="assets/gamedropradar-preview.jpg" alt="GameDropRadar: tüm ücretsiz oyun fırsatları tek radarda" data-alt-tr="GameDropRadar: tüm ücretsiz oyun fırsatları tek radarda" data-alt-en="GameDropRadar: every game drop on one radar" width="600" height="1298">
             </div>
           </article>
 
@@ -287,11 +293,11 @@
               <p data-tr="Profesör Baykuş ile zihinden işlem hızını geliştir. On soruluk hızlı bölümler oyna, günlük serini koru, arkadaşlarınla canlı yarış, Game Center liderlik tablosuna tırman ve ilerlemeni ana ekran widget'ından izle." data-en="Build faster mental arithmetic with Professor Owl. Play quick ten-question levels, protect your daily streak, race friends live, climb Game Center leaderboards, and follow your progress from the Home Screen widget.">Profesör Baykuş ile zihinden işlem hızını geliştir. On soruluk hızlı bölümler oyna, günlük serini koru, arkadaşlarınla canlı yarış, Game Center liderlik tablosuna tırman ve ilerlemeni ana ekran widget'ından izle.</p>
               <div class="actions">
                 <a class="button primary" href="mathowl/" data-tr="Daha fazla bilgi" data-en="Learn more">Daha fazla bilgi</a>
-                <a class="button secondary" href="https://apps.apple.com/us/app/mathowl-daily-math/id6787484771" data-tr="App Store'da görüntüle" data-en="View on the App Store">App Store'da görüntüle</a>
+                <a class="button secondary" href="https://apps.apple.com/us/app/mathowl-daily-math/id6787484771" data-tr="App Store'dan indir" data-en="Download on the App Store">App Store'dan indir</a>
               </div>
             </div>
             <div class="preview">
-              <img src="assets/mathowl-preview.jpg" alt="MathOwl live arithmetic duel" width="554" height="1200">
+              <img src="assets/mathowl-preview.jpg" alt="MathOwl: arkadaşınla 10 soruda canlı yarış" data-alt-tr="MathOwl: arkadaşınla 10 soruda canlı yarış" data-alt-en="MathOwl: race a friend live across 10 questions" width="600" height="1298">
             </div>
           </article>
         </div>
